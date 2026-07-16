@@ -66,11 +66,49 @@ Date Functions
 
 ### Business Questions
 
--1	Total number of customers
--2	Total number of orders
--3	Total revenue
--4	Top 10 products by sales
-...	...
+- 	Total number of customers
+- 	Total number of orders
+- 	Total revenue
+- 	Top 10 products by sales
+
  Detailed SQL analysis and query results can be found in:
 
 [Business Analysis Report](documentation/business_analysis.md)
+
+### Key Insights 
+
+## Key Insights
+
+- The analysis covered **10,000 customers** and **15,000 orders**, with the business generating a total revenue of **4.25 million** (dataset monetary units).
+
+- **Electronics** was the highest-performing category, contributing the largest share of total revenue, followed by **Home & Kitchen** and **Accessories**.
+
+- A small group of customers contributed significantly more revenue than the average customer, highlighting the importance of retaining high-value customers.
+
+- **Next Level Systems** emerged as the top-performing supplier, generating the highest sales among all suppliers.
+
+- Delivery performance was consistent across all three shipping carriers, with an average delivery time of around **4.5 days**.
+
+- Monthly revenue remained fairly stable throughout the year, although a few months recorded stronger sales than others.
+
+- Some products generated strong revenue despite receiving customer ratings below **3.5**, indicating potential opportunities to improve product quality or customer satisfaction.
+
+### Business Recommendations
+
+- Continue investing in the Electronics category, as it is the strongest contributor to overall revenue.
+
+- Build customer loyalty programs for high-spending customers to encourage repeat purchases.
+
+- Review products with low customer ratings but strong sales to identify possible quality or service issues.
+
+- Maintaining strong relationships with top-performing suppliers while monitoring supplier performance.
+
+- Continue tracking delivery performance to ensure shipping times remain consistent and customer expectations are met.
+
+- Explore promotional campaigns or pricing strategies for lower-performing product categories to improve their sales.
+
+### Conclusion
+
+The analysis provided valuable insights into customer behavior, product performance, supplier contribution, and overall sales performance. Using SQL, raw transactional data was transformed into meaningful business information that can support data-driven decision-making.
+
+Overall, the findings highlight opportunities to strengthen customer retention, improve product quality, optimize supplier relationships, and support future business growth.
