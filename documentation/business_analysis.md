@@ -26,21 +26,27 @@ FROM orders;
 ```
 <img width="151" height="65" alt="Screenshot 2026-07-16 163306" src="https://github.com/user-attachments/assets/56e96612-bbdd-49c9-a0cc-5b54815ff61e" />
 
-### 4- Which products generated the highest sales revenue?
+### 4- Which customers purchased products from the highest number of different categories?
 
 ```
 SELECT
-    p.product_name,
-    ROUND(SUM(oi.quantity * oi.price_at_purchase),2) AS total_sales
-FROM products p
+c.customer_id,
+CONCAT(c.first_name, ' ', c.last_name) AS customer_name,
+COUNT(DISTINCT p.category) AS categories_purchased
+FROM customers c
+JOIN orders o
+ON c.customer_id = o.customer_id
 JOIN order_items oi
-ON p.product_id = oi.product_id
-GROUP BY p.product_id, p.product_name
-ORDER BY total_sales DESC
+ON o.order_id = oi.order_id
+JOIN products p
+ON oi.product_id = p.product_id
+GROUP BY c.customer_id, customer_name
+ORDER BY categories_purchased DESC
 LIMIT 10;
 ```
 
-<img width="266" height="257" alt="Screenshot 2026-07-16 163428" src="https://github.com/user-attachments/assets/c6c8befc-82a6-4cc5-a651-a01aff76baa8" />
+<img width="442" height="252" alt="Screenshot 2026-07-17 124357" src="https://github.com/user-attachments/assets/d7ded565-8c1d-4ff4-894a-dc9cc76d24ae" />
+
 
 ### 5- How many orders has each customer placed, and how much have they spent in total?
 
