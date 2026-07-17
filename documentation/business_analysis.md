@@ -160,28 +160,22 @@ order by revenue desc;
 
 <img width="210" height="322" alt="image" src="https://github.com/user-attachments/assets/a9baa2d6-fe69-43c7-ba3e-059d6f4a9a0b" />
 
-### 12-Which customers generate the highest revenue for the business?
+### 12- Which customers generate the highest revenue for the business?
 
 ```
-WITH customer_spending AS (
-    SELECT
-        c.customer_id,
-        CONCAT(c.first_name, ' ', c.last_name) AS customer_name,
-        ROUND(SUM(o.total_price), 2) AS total_spent
-    FROM customers c
-    JOIN orders o
-        ON c.customer_id = o.customer_id
-    GROUP BY c.customer_id, customer_name
-)
-
 SELECT
-    customer_id,  customer_name,total_spent,
-    DENSE_RANK() OVER (ORDER BY total_spent DESC) AS customer_rank
-FROM customer_spending
-ORDER BY customer_rank;
+    p.product_id,
+    p.product_name,
+    p.category,
+    p.price
+FROM products p
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM order_items oi
+    WHERE oi.product_id = p.product_id);
 ```
+<img width="442" height="91" alt="image" src="https://github.com/user-attachments/assets/b49190c2-1db3-4821-9518-3cf427fe6d2d" />
 
-<img width="456" height="421" alt="image" src="https://github.com/user-attachments/assets/38541449-fe30-49de-910f-2b02945de2eb" />
 
 ### 13- Identify the Top 10 products based on total sales revenue.
 
