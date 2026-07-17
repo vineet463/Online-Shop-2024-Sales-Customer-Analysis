@@ -160,7 +160,7 @@ order by revenue desc;
 
 <img width="210" height="322" alt="image" src="https://github.com/user-attachments/assets/a9baa2d6-fe69-43c7-ba3e-059d6f4a9a0b" />
 
-### 12- Which customers generate the highest revenue for the business?
+### 12- Which products have never been ordered?
 
 ```
 SELECT
