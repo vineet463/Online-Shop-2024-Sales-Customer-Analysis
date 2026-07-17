@@ -9,6 +9,6 @@
 - Which customers spend more than the average customer?
 - Which products are priced above the average product price?
 - How has revenue changed month by month?
--Which customers generate the highest revenue for the business?
+- Which products have never been ordered?
 - Identify the Top 10 products based on total sales revenue.
 - Identify products with an average review rating below 3.5 but revenue above the overall average product revenue.
