@@ -1,4 +1,4 @@
-# Online-Shop-2024-Sales-Customer-Analysis
+#    E-commerce Sales Analysis
 
 ### About the Project
 
